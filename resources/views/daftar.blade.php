@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign UP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body style="background-image: url('wave.svg'); background-repeat:no-repeat; background-position:center bottom;">
+    <div class="wrapper">
+        <div class="logo">
+            <img src="https://i.pinimg.com/550x/45/c3/df/45c3df6b303de1c9eb6f0cb502767987.jpg" alt="" />
+        </div>
+        <div class="text-center mt-1 name">Project Web</div>
+        <form class="p-3 mt-3" method="POST" action="{{url('/store-form')}}">
+            @csrf
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user is-invalid"></span>
+                <input type="email" name="email" id="userName" placeholder="Email" class="" />
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-user"></span>
+                <input type="text" name="name" id="" placeholder="Name">
+            </div>
+            @error('name')<div id="invalid-feedback" style="color: red !important">Name Invalid</div>@enderror
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-user"></span>
+                <input type="date" name="birthday" id="" placeholder="Birthday">
+            </div>
+            @error('birthday')<div id="invalid-feedback" style="color: red !important">Date Invalid</div>@enderror
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password" id="pwd" placeholder="Password" />
+            </div>
+            @error('password')<div id="invalid-feedback" style="color: red !important">Password Invalid</div>@enderror
+            <button class="btn mt-3 align-items-center" name="login" href="#">Sign-up</button>
+        </form>
+        {{-- <div class="text-center fs-6">
+            <a href="forgor.php">Forget password?</a> or <a href="edit.php">Edit Password</a>
+        </div> --}}
+    </div>
+</body>
+
+</html>
