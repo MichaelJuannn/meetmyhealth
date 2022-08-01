@@ -77,7 +77,7 @@
                     <p class="card-text text-capitalize"> Born and lives in Malang. Currently Studying in State
                         University of Malang</p>
                     <span>
-                        <a href="https://www.instagram.com/juan.michl"
+                        <a href="https://www.instagram.com/ddeailsa"
                             class="position-absolute bottom-0 start-0 px-2 py-2">
                             <i class="fa-brands fa-instagram fa-2xl"></i></a>
                     </span>
